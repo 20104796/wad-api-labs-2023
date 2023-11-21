@@ -8,3 +8,5 @@ logs/
 
 # 忽略所有的.log文件
 *.log
+
+node-lab1/.env
