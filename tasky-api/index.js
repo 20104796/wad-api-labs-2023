@@ -1,5 +1,6 @@
 import dotenv from 'dotenv';
 import express from 'express';
+import cors from 'cors';
 import tasksRouter from './api/tasks';
 import './db';
 import usersRouter from './api/users';
@@ -16,6 +17,7 @@ const errHandler = (err, req, res, next) => {
 };
 
 const app = express();
+app.use(cors());
 app.use(express.json());
 
 const port = process.env.PORT;
