@@ -10,10 +10,12 @@ const SignUpPage = props => {
     const [registered, setRegistered] = useState(false);
 
     const register = () => {
+
         let passwordRegEx = /^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$/;
         const validPassword = passwordRegEx.test(password);
-
+        console.log(validPassword)
         if (validPassword && password === passwordAgain) {
+
             context.register(userName, password);
             setRegistered(true);
         }
